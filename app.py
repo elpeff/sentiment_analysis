@@ -139,7 +139,7 @@ def validity_check(text: str) -> tuple[bool, str, float]:
     result = validity_model(text)[0]
     label  = result["label"].lower()
     score  = round(result["score"] * 100, 1)
-    is_valid     = label == "label_1" and score >= 90.0
+    is_valid     = label == "label_1" and score >= 80.0
     display_label = "acceptable" if is_valid else "unacceptable"
 
     return is_valid, display_label, score
