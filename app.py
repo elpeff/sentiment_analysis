@@ -63,7 +63,7 @@ def load_spacy():
         return spacy.load(model_name)
 
 
-# ── Load both transformer models (cached) ─────────────────────────────────────
+# ── Load transformer model (cached) ─────────────────────────────────────
 @st.cache_resource
 def load_models():
     validity = pipeline(
